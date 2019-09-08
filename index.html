@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>HW0 - CS4470</title>
+</head>
+
+<body>
+  <div class="title-container">
+    <h1>HW0 - Cost-Optimized Parallel Code Breaker (COPACOBANA)</h1>
+  </div>
+  <div class="content-container">
+    <h2>Bio.</h2>
+    <div class="content-paragraph">
+      <p>
+        I am a senior CS undergrad and I am interested in cyber security. I inted
+        to graduate this December and continue my education by specializing in grad school.
+        I would like to gain a better understanding of parallel programming models and implementations
+        from this course.
+     </p>
+    </div>
+    <hr>
+    <h2>Problem.</h2>
+    <div class="content-paragraph">
+      <p>
+        Cracking small key size ciphers. Many cryptographic
+        algorithms require multiple independent operations. Because of this, they
+        pair well with hardware implementations of parallelization.
+     </p>
+     <br>
+     <img src="images/copacobana_architecture.jpg" alt="architecture">
+     <p>
+       COPACOBANA is a machine designed for this task utilizing commercially available
+       field-programmable gate arrays (FPGA). Each COPACOBANA contains 20 modules
+       with each module containing 6 FPGAs --> total 120 compute FPGAs. The data bus
+       of each module is interfaced to the global data bus on a backplane. FPGAs on
+       the same module can communicate via a local 64-bit data bus. Control signals
+       are run over a separate 16-bit address bus. Memory is local to each chip.
+     </p>
+    </div>
+    <hr>
+    <h2>Performance.</h2>
+    <div class="content-paragraph">
+      <p>
+        COPACOBANA is able to perform cryptographic operations in parallel for applications
+        with high computational but low memory and communication requirements. DES
+        can be broken within less than a week at an average throughput of 65.3 billion
+        searched keys per second.
+     </p>
+    </div>
+    <hr>
+    <h2>Scalability.</h2>
+    <div class="content-paragraph">
+      <p>
+        Larger keys that rely on DES can continue to be exploited by highly compute
+        bound brute-force decryption. Adding more boards to the COPACOBANA and segmenting
+        smaller portions of the key space results in a linear speedup.
+        Adding more compute
+     </p>
+    </div>
+    <hr>
+    <h2>Credit.</h2>
+    <div class="resources">
+      <p>
+        Credit for all of the work presented on this site belongs to:
+        <ul>
+          <li>Tim Guneysu</li>
+          <li>Timo Kasper</li>
+          <li>Martin Novotny</li>
+          <li>Christof Paar</li>
+          <li>Andy Rupp</li>
+        </ul>
+     </p>
+     <p>
+       Check out their article <a href="TC_COPACOBANA.pdf">here</a>
+     </p>
+    </div>
+  </div>
+
+
+  <div class="footer">
+    <h2 class="footer-text">© 2019 Preston Fransen.</h2>
+  </div>
+
+</body>
+
+</html>
